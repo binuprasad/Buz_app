@@ -69,22 +69,20 @@ class _OnBoardingState extends State<OnBoarding> {
                 },
               ),
             ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  3,
-                  (index) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.25,
-                      height: 5,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: currentIndex == index
-                              ? Colors.black
-                              : Colors.grey.shade200),
-                    ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(
+                3,
+                (index) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: 5,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: currentIndex == index
+                            ? Colors.black
+                            : Colors.grey.shade200),
                   ),
                 ),
               ),
@@ -105,7 +103,7 @@ class _OnBoardingState extends State<OnBoarding> {
               onPressed: () {
                 if (currentIndex < 2) {
                   controller!.nextPage(
-                      duration: Duration(milliseconds: 200),
+                      duration: const Duration(milliseconds: 200),
                       curve: Curves.bounceIn);
                 }
               },
