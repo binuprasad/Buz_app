@@ -1,5 +1,5 @@
 import 'package:buz_app/firebase_options.dart';
-import 'package:buz_app/view/login.dart';
+import 'package:buz_app/view/on_boarding.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginView(),
+      home: const OnBoarding(),
     );
   }
 }

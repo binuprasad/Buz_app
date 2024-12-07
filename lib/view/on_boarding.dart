@@ -1,3 +1,4 @@
+import 'package:buz_app/view/login.dart';
 import 'package:flutter/material.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -16,20 +17,13 @@ class _OnBoardingState extends State<OnBoarding> {
     super.initState();
   }
 
-  // @override
-  // void dispose() {
-  // controller.dispose();
-  //   super.dispose();
-  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
-
           children: [
-            
             Expanded(
               child: PageView.builder(
                 controller: controller,
@@ -105,6 +99,13 @@ class _OnBoardingState extends State<OnBoarding> {
                   controller!.nextPage(
                       duration: const Duration(milliseconds: 200),
                       curve: Curves.bounceIn);
+                } else {
+               
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginView()));
+                  // Or perform any other desired action.
                 }
               },
               child: Text(
